@@ -20,9 +20,9 @@ function isCharVowel(char) {
 
 export function countSyllables (word) {
   let syllables = countVowels(word);
-  if (word[word.length -1] === "e") {
+  if (word[word.length -1] === "e" && word[word.length-2] !== "l") {
     syllables --;
-  }
+  } 
   for (let i = 0; i < word.length; i ++) {
     if (isCharVowel(word[i]) && isCharVowel(word[i + 1])) {
       syllables --;
