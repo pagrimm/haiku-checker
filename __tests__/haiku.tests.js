@@ -17,9 +17,25 @@ describe('Haiku checker', () => {
   });
 
   test('should correctly create a new Haiku object', () => {
-    let userHaiku = new Haiku("An old pond!", "A frog jumps in", "the sound of water");
-    expect(userHaiku.line1).toEqual("An old pond!");
+    let userHaiku = new Haiku("An ocean voyage", "As waves break over the bow", "the sea welcomes me");
+    expect(userHaiku.line1).toEqual("An ocean voyage");
   });
+
+  test('should correctly return number of syllables in a line', () => {
+    let userHaiku = new Haiku("An ocean voyage", "As waves break over the bow", "the sea welcomes me");
+    expect(userHaiku.checkSyllables("line1")).toEqual(5);
+  });
+
+  test('should correctly return number of syllables in a line', () => {
+    let userHaiku = new Haiku("An ocean voyage", "As waves break over the bow", "the sea welcomes me");
+    expect(userHaiku.checkSyllables("line2")).toEqual(7);
+  });
+
+  test('should correctly return number of syllables in a line', () => {
+    let userHaiku = new Haiku("An ocean voyage", "As waves break over the bow", "the sea welcomes me");
+    expect(userHaiku.checkSyllables("line3")).toEqual(5);
+  });
+
 });
 
 
