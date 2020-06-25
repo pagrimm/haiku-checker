@@ -16,23 +16,31 @@ describe('Haiku checker', () => {
     expect(countSyllables("fable")).toEqual(2);
   });
 
+  test('should account for y as a vowel', () => {
+    expect(countSyllables("philosophy")).toEqual(4);
+  });
+
+  test('should correctly count words with double vowel endings', () => {
+    expect(countSyllables("canoe")).toEqual(2);
+  });
+
   test('should correctly create a new Haiku object', () => {
-    let userHaiku = new Haiku("An ocean voyage", "As waves break over the bow", "the sea welcomes me");
-    expect(userHaiku.line1).toEqual("An ocean voyage");
+    let userHaiku = new Haiku("An old silent pond", "A frog jumps into the pond", "splash! Silence again");
+    expect(userHaiku.line1).toEqual("An old silent pond");
   });
 
   test('should correctly return number of syllables in a line', () => {
-    let userHaiku = new Haiku("An ocean voyage", "As waves break over the bow", "the sea welcomes me");
+    let userHaiku = new Haiku("An old silent pond", "A frog jumps into the pond", "splash! Silence again");
     expect(userHaiku.checkSyllables("line1")).toEqual(5);
   });
 
   test('should correctly return number of syllables in a line', () => {
-    let userHaiku = new Haiku("An ocean voyage", "As waves break over the bow", "the sea welcomes me");
+    let userHaiku = new Haiku("An old silent pond", "A frog jumps into the pond", "splash! Silence again");
     expect(userHaiku.checkSyllables("line2")).toEqual(7);
   });
 
   test('should correctly return number of syllables in a line', () => {
-    let userHaiku = new Haiku("An ocean voyage", "As waves break over the bow", "the sea welcomes me");
+    let userHaiku = new Haiku("An old silent pond", "A frog jumps into the pond", "splash! Silence again");
     expect(userHaiku.checkSyllables("line3")).toEqual(5);
   });
 
