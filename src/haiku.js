@@ -6,4 +6,10 @@ export function countVowels(word) {
       count ++;
     }
   }
+  return count;
+}
+
+export function countSyllables (word) {
+  let syllables = countVowels(word);
+  return syllables;
 }

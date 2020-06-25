@@ -1,9 +1,14 @@
 import { countVowels } from './../src/haiku.js';
+import { countSyllables } from './../src/haiku.js';
 
 describe('Haiku checker', () => {
 
   test('should correctly number of vowels in a word', () => {
-    expect(countVowels("moonshine")).toEqual(3);
+    expect(countVowels("moonshine")).toEqual(4);
+  });
+
+  test('should correctly subtract any silent vowels', () => {
+    expect(countSyllables("moonshine")).toEqual(2);
   });
 });
 
