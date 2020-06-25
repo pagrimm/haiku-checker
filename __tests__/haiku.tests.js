@@ -3,7 +3,7 @@ import { countVowels } from './../src/haiku.js';
 describe('Haiku checker', () => {
 
   test('should correctly number of vowels in a word', () => {
-    expect(countVowels("dog")).toEqual(1);
+    expect(countVowels("moonshine")).toEqual(3);
   });
 });
 
