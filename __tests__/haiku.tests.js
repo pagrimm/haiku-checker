@@ -1,5 +1,6 @@
 import { countVowels } from './../src/haiku.js';
 import { countSyllables } from './../src/haiku.js';
+import { Haiku } from './../src/haiku.js';
 
 describe('Haiku checker', () => {
 
@@ -13,6 +14,11 @@ describe('Haiku checker', () => {
 
   test('should correctly count "le" vowel endings', () => {
     expect(countSyllables("fable")).toEqual(2);
+  });
+
+  test('should correctly create a new Haiku object', () => {
+    let userHaiku = new Haiku("An old pond!", "A frog jumps in", "the sound of water");
+    expect(userHaiku.line1).toEqual("An old pond!");
   });
 });
 

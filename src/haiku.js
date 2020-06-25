@@ -1,3 +1,7 @@
+export function Haiku(line1, line2, line3) {
+
+}
+
 export function countVowels(word) {
   let vowels = ["a", "e", "i", "o", "u"];
   let count = 0;
