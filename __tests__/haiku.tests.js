@@ -10,6 +10,10 @@ describe('Haiku checker', () => {
   test('should correctly subtract any silent vowels', () => {
     expect(countSyllables("moonshine")).toEqual(2);
   });
+
+  test('should correctly count "le" vowel endings', () => {
+    expect(countSyllables("fable")).toEqual(2);
+  });
 });
 
 
