@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/bootstrap.css" rel="stylesheet" type = "text/css">
-  <link href="css/styles.css" rel="stylesheet" type = "text/css">
-  <script src="js/jquery-3.5.1.js"></script>
-  <script src="js/scripts.js"></script>
   <title>Document</title>
 </head>
 <body>
-  
+  <h1>Haiku Checker:</h1>
+  <h3>Enter your haiku below and we'll make sure it's actually a Haiku.</h3>
+  <form id="haiku-form">
+    <p>Line 1:</p>
+    <input type="text" id="line1">
+    <p>Line 2:</p>
+    <input type="text" id="line2">
+    <p>Line 3:</p>
+    <input type="text" id="line3">
+    <button>Submit your Haiku</button>
+  </form>
+
+  <div id="results-container"></div>
 </body>
 </html>

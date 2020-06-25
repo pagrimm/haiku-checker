@@ -44,6 +44,16 @@ describe('Haiku checker', () => {
     expect(userHaiku.checkSyllables("line3")).toEqual(5);
   });
 
+  test('should correctly return number of syllables for words where y functions as a vowel', () => {
+    expect(countSyllables("homonym")).toEqual(3);
+    expect(countSyllables("fly")).toEqual(1);
+    expect(countSyllables("acryllic")).toEqual(3);
+  });
+
+  test('should correctly return number of syllables for words where you do not count "le" vowel endings', () => {
+    expect(countSyllables("while")).toEqual(1);
+    expect(countSyllables("style")).toEqual(1);
+  });
 });
 
 

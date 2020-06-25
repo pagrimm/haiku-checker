@@ -19,19 +19,24 @@ export class Haiku {
 
 
 export function countVowels(word) {
-  let vowels = ["a", "e", "i", "o", "u", "y"];
+  let vowels = ["a", "e", "i", "o", "u"];
   let count = 0;
   word = word.toLowerCase();
   for (let i = 0; i < word.length; i++) {
     if (vowels.includes(word[i].toLowerCase())) {
       count ++;
+    } else if (word[i] === "y" && !vowels.includes(word[i-1]) && !vowels.includes(word[i+1])) {
+      count ++;
     }
+  }
+  if (count === 0) {
+    count ++;
   }
   return count;
 }
 
 function isCharVowel(char) {
-  let vowels = ["a", "e", "i", "o", "u", "y"];
+  let vowels = ["a", "e", "i", "o", "u"];
   if (vowels.includes(char)) {
     return true;
   } else {
